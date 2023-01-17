@@ -1,21 +1,66 @@
 port: 7890
 socks-port: 7891
 allow-lan: false
-mode: rule
+mode: Rule
 log-level: info
-external-controller: 127.0.0.1:9090
+external-controller: 0.0.0.0:9090
 dns:
   enable: true
   ipv6: false
-  enhanced-mode: redir-host
+  default-nameserver:
+  - 217.218.127.127
+  - 185.51.200.2
+  enhanced-mode: fake-ip
   nameserver:
-  - 114.114.114.114
-  - 223.5.5.5
-  - 8.8.8.8
-  - 9.9.9.9
-  - 1.1.1.1
-  - https://dns.google/dns-query
-  - tls://dns.google:853
+  - 217.218.127.127
+  - 185.51.200.2
+  fallback:
+  - 64.6.64.6
+  - 64.6.65.6
+  fallback-filter:
+    geoip: true
+    geoip-code: IR
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+    - 127.0.0.1/32
+    domain:
+    - +.google.com
+    - +.facebook.com
+    - +.youtube.com
+    - +.twitter.com
+    - +.bing.com
+  fake-ip-filter:
+  - '*.lan'
+  - stun.*.*.*
+  - stun.*.*
+  - time.windows.com
+  - time.nist.gov
+  - time.apple.com
+  - time.asia.apple.com
+  - '*.openwrt.pool.ntp.org'
+  - pool.ntp.org
+  - ntp.ubuntu.com
+  - time1.apple.com
+  - time2.apple.com
+  - time3.apple.com
+  - time4.apple.com
+  - time5.apple.com
+  - time6.apple.com
+  - time7.apple.com
+  - time1.google.com
+  - time2.google.com
+  - time3.google.com
+  - time4.google.com
+  - api.joox.com
+  - joox.com
+  - '*.xiami.com'
+  - '*.msftconnecttest.com'
+  - '*.msftncsi.com'
+  - '*.*.stun.playstation.net'
+  - xbox.*.*.microsoft.com
+  - '*.ipv6.microsoft.com'
+  - speedtest.cros.wr.pvp.net
 proxies:
 - name: 🇺🇸US-18.222.63.50-020 | 103.532MB
   server: 18-222-63-50.ipv4.rush.ml
@@ -953,60 +998,12 @@ proxies:
   ws-opts:
     path: /
 proxy-groups:
-- name: Global ©️
+- name: Core
   type: select
   proxies:
-  - Global - UrlTest(Tiers) 🥶
-  - Global - Fallback(Tiers) 🌎
-  - Global - LoadBalance(ch) 🦄
-  - Global - LoadBalance(rr) 🍄
-  - Tier 1 🚀
-  - Tier 2 ⚡️
-  - Tier 3 💎
-  - Tier 4 🗿
-- name: Global - UrlTest(Tiers) 🥶
-  type: url-test
-  url: http://clients3.google.com/generate_204
-  interval: 300
-  proxies:
-  - Tier 1 🚀
-  - Tier 2 ⚡️
-  - Tier 3 💎
-  - Tier 4 🗿
-- name: Global - Fallback(Tiers) 🌎
-  type: fallback
-  url: http://clients3.google.com/generate_204
-  interval: 300
-  proxies:
-  - Tier 1 🚀
-  - Tier 2 ⚡️
-  - Tier 3 💎
-  - Tier 4 🗿
-- name: Global - LoadBalance(ch) 🦄
-  type: load-balance
-  strategy: consistent-hashing
-  url: http://clients3.google.com/generate_204
-  interval: 300
-  proxies:
-  - Tier 1 🚀
-  - Tier 2 ⚡️
-  - Tier 3 💎
-  - Tier 4 🗿
-- name: Global - LoadBalance(rr) 🍄
-  type: load-balance
-  strategy: round-robin
-  url: http://clients3.google.com/generate_204
-  interval: 300
-  proxies:
-  - Tier 1 🚀
-  - Tier 2 ⚡️
-  - Tier 3 💎
-  - Tier 4 🗿
-- name: Tier 1 🚀
-  type: url-test
-  url: http://clients3.google.com/generate_204
-  interval: 300
-  tolerance: 100
+  - Ping
+- name: Servers
+  type: select
   proxies:
   - 🇺🇸US-18.222.63.50-020 | 103.532MB
   - 🇺🇸US-156.146.38.163-000 | 61.65MB
@@ -1033,12 +1030,6 @@ proxy-groups:
   - 🇩🇪DE-167.235.150.240-062 | 29.531MB
   - 🇺🇸US-24.199.119.135-009 | 27.724MB
   - CL-190.120.230.9-085 | 21.377MB
-- name: Tier 2 ⚡️
-  type: url-test
-  url: http://clients3.google.com/generate_204
-  interval: 300
-  tolerance: 100
-  proxies:
   - 🇩🇪DE-167.86.116.89-100 | 19.444MB
   - 🇺🇸US-162.251.61.47-190 | 19.403MB
   - 🇺🇸US-162.251.61.47-133 | 19.157MB
@@ -1064,12 +1055,6 @@ proxy-groups:
   - 🇨🇦CA-134.195.196.178-129 | 14.622MB
   - 🇫🇷FR-135.125.190.21-114 | 13.712MB
   - 🇰🇷KR-129.154.50.21-120 | 13.253MB
-- name: Tier 3 💎
-  type: url-test
-  url: http://clients3.google.com/generate_204
-  interval: 300
-  tolerance: 100
-  proxies:
   - 🇰🇷KR-129.154.50.21-119 | 13.19MB
   - 🇰🇷KR-129.154.50.21-118 | 13.183MB
   - 🇰🇷KR-152.67.218.38-109 | 13.137MB
@@ -1095,12 +1080,6 @@ proxy-groups:
   - 🇺🇸US-5.188.0.151-181 | 9.201MB
   - 🇯🇵JP-18.177.58.124-184 | 8.984MB
   - 🇺🇸US-38.114.114.139-177 | 8.467MB
-- name: Tier 4 🗿
-  type: url-test
-  url: http://clients3.google.com/generate_204
-  interval: 300
-  tolerance: 100
-  proxies:
   - 🇸🇬SG-139.162.5.19-165 | 8.212MB
   - 🇺🇸US-38.114.114.139-179 | 8.205MB
   - 🇭🇰HK-103.135.103.216-126 | 5.694MB
@@ -1127,5 +1106,126 @@ proxy-groups:
   - RELAY-141.193.213.20-070 | 0.0MB
   - RELAY-162.159.152.244-067 | 0.0MB
   - 🇫🇷FR-193.70.85.191-108 | 0.0MB
+- name: Ping
+  type: url-test
+  url: https://api.telegram.org/robots.txt
+  interval: 300
+  proxies:
+  - 🇺🇸US-18.222.63.50-020 | 103.532MB
+  - 🇺🇸US-156.146.38.163-000 | 61.65MB
+  - 🇺🇸US-170.187.134.190-002 | 61.617MB
+  - 🇺🇸US-184.170.241.194-005 | 45.223MB
+  - 🇺🇸US-104.128.80.237-004 | 42.052MB
+  - IE-3.249.129.98-044 | 39.23MB
+  - 🇺🇸US-172.96.192.100-016 | 38.628MB
+  - 🇺🇸US-97.64.26.63-011 | 35.919MB
+  - 🇺🇸US-93.179.112.70-015 | 35.857MB
+  - 🇬🇧GB-51.104.254.73-185 | 35.208MB
+  - 🇫🇷FR-51.15.0.113-058 | 33.506MB
+  - 🇩🇪DE-89.163.140.153-054 | 33.151MB
+  - 🇺🇸US-129.159.41.233-068 | 32.706MB
+  - 🇺🇸US-97.64.122.63-017 | 31.882MB
+  - 🇺🇸US-129.146.133.157-046 | 30.142MB
+  - CH-156.146.62.160-093 | 29.897MB
+  - 🇺🇸US-173.208.242.226-037 | 29.882MB
+  - 🇺🇸US-173.208.242.226-038 | 29.724MB
+  - 🇩🇪DE-167.235.150.240-064 | 29.683MB
+  - 🇩🇪DE-165.227.175.88-066 | 29.679MB
+  - 🇩🇪DE-159.69.55.190-065 | 29.58MB
+  - 🇺🇸US-173.208.242.226-036 | 29.542MB
+  - 🇩🇪DE-167.235.150.240-062 | 29.531MB
+  - 🇺🇸US-24.199.119.135-009 | 27.724MB
+  - CL-190.120.230.9-085 | 21.377MB
+  - 🇩🇪DE-167.86.116.89-100 | 19.444MB
+  - 🇺🇸US-162.251.61.47-190 | 19.403MB
+  - 🇺🇸US-162.251.61.47-133 | 19.157MB
+  - 🇷🇺RU-194.26.229.90-138 | 18.857MB
+  - 🇫🇷FR-92.222.217.16-127 | 18.806MB
+  - 🇩🇪DE-178.18.244.2-191 | 18.334MB
+  - 🇷🇺RU-92.223.109.126-134 | 17.469MB
+  - 🇺🇸US-162.251.61.47-105 | 17.319MB
+  - 🇺🇸US-95.169.4.174-027 | 17.214MB
+  - 🇺🇸US-138.124.184.163-110 | 16.941MB
+  - 🇺🇸US-144.168.58.170-008 | 16.234MB
+  - 🇯🇵JP-172.104.114.137-076 | 16.201MB
+  - 🇯🇵JP-172.104.114.137-077 | 15.945MB
+  - 🇯🇵JP-172.104.114.137-084 | 15.895MB
+  - 🇯🇵JP-172.104.114.137-069 | 15.852MB
+  - 🇯🇵JP-172.104.114.137-082 | 15.709MB
+  - 🇯🇵JP-172.104.114.137-072 | 15.665MB
+  - 🇯🇵JP-172.104.114.137-078 | 15.53MB
+  - 🇯🇵JP-172.104.114.137-071 | 15.471MB
+  - 🇯🇵JP-172.104.114.137-086 | 15.221MB
+  - 🇯🇵JP-172.104.114.137-081 | 14.981MB
+  - 🇯🇵JP-172.104.114.137-074 | 14.965MB
+  - 🇨🇦CA-134.195.196.178-129 | 14.622MB
+  - 🇫🇷FR-135.125.190.21-114 | 13.712MB
+  - 🇰🇷KR-129.154.50.21-120 | 13.253MB
+  - 🇰🇷KR-129.154.50.21-119 | 13.19MB
+  - 🇰🇷KR-129.154.50.21-118 | 13.183MB
+  - 🇰🇷KR-152.67.218.38-109 | 13.137MB
+  - 🇰🇷KR-146.56.155.70-106 | 13.067MB
+  - 🇰🇷KR-146.56.155.70-107 | 13.065MB
+  - 🇫🇷FR-95.142.161.114-164 | 12.497MB
+  - FI-37.143.129.230-169 | 12.379MB
+  - 🇭🇰HK-103.152.221.186-123 | 12.298MB
+  - 🇺🇸US-37.120.147.230-035 | 12.198MB
+  - 🇺🇸US-37.120.147.230-034 | 12.196MB
+  - 🇫🇷FR-155.133.129.142-151 | 12.026MB
+  - 🇺🇸US-193.239.87.134-048 | 11.778MB
+  - 🇦🇺AU-152.67.98.30-135 | 11.202MB
+  - 🇺🇸US-37.120.147.230-041 | 10.943MB
+  - 🇮🇳IN-68.183.83.94-172 | 10.649MB
+  - 🇮🇳IN-152.67.160.174-182 | 10.456MB
+  - 🇸🇬SG-139.162.17.193-170 | 10.285MB
+  - 🇸🇬SG-139.162.17.77-142 | 10.245MB
+  - ID-108.137.18.26-148 | 9.691MB
+  - 🇺🇸US-38.114.114.139-113 | 9.595MB
+  - 🇺🇸US-20.66.19.98-178 | 9.266MB
+  - 🇺🇸US-5.188.0.151-180 | 9.239MB
+  - 🇺🇸US-5.188.0.151-181 | 9.201MB
+  - 🇯🇵JP-18.177.58.124-184 | 8.984MB
+  - 🇺🇸US-38.114.114.139-177 | 8.467MB
+  - 🇸🇬SG-139.162.5.19-165 | 8.212MB
+  - 🇺🇸US-38.114.114.139-179 | 8.205MB
+  - 🇭🇰HK-103.135.103.216-126 | 5.694MB
+  - 🇺🇸US-37.120.147.230-033 | 4.436MB
+  - RELAY-141.101.115.140-025 | 0.0MB
+  - 🇯🇵JP-43.206.236.83-087 | 0.0MB
+  - RELAY-172.67.164.123-088 | 0.0MB
+  - 🇫🇷FR-129.151.234.26-089 | 0.0MB
+  - RELAY-172.67.70.22-090 | 0.0MB
+  - RELAY-190.93.244.2-091 | 0.0MB
+  - RELAY-104.20.75.49-092 | 0.0MB
+  - RELAY-141.101.115.100-083 | 0.0MB
+  - RELAY-172.67.127.250-094 | 0.0MB
+  - RELAY-162.159.152.2-095 | 0.0MB
+  - RELAY-172.67.169.131-096 | 0.0MB
+  - RELAY-104.18.38.174-097 | 0.0MB
+  - RELAY-23.227.38.39-098 | 0.0MB
+  - 🇺🇸US-150.230.41.9-079 | 0.0MB
+  - RELAY-203.30.191.191-101 | 0.0MB
+  - RELAY-141.101.115.111-075 | 0.0MB
+  - RELAY-185.162.228.228-103 | 0.0MB
+  - RELAY-104.21.21.147-104 | 0.0MB
+  - RELAY-104.26.4.10-073 | 0.0MB
+  - RELAY-141.193.213.20-070 | 0.0MB
+  - RELAY-162.159.152.244-067 | 0.0MB
+  - 🇫🇷FR-193.70.85.191-108 | 0.0MB
+rule-providers:
+  direct:
+    type: http
+    behavior: classical
+    url: https://github.com/Airuop/servers/releases/latest/download/direct.yaml
+    path: ./ruleset/direct.yaml
+    interval: 432000
+  block:
+    type: http
+    behavior: classical
+    url: https://github.com/Airuop/servers/releases/latest/download/block.yaml
+    path: ./ruleset/block.yaml
+    interval: 432000
 rules:
-- MATCH,Global ©️
+- RULE-SET,direct,DIRECT
+- RULE-SET,block,REJECT
+- MATCH,All
