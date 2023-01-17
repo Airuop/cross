@@ -1,131 +1,98 @@
 port: 7890
 socks-port: 7891
 allow-lan: false
-mode: rule
+mode: Rule
 log-level: info
-external-controller: 127.0.0.1:9090
-
-# tun:
-#   enable: true
-#   stack: system
-#   auto-route: true
-#   auto-detect-interface: true
-#   dns-hijack:
-#     - 8.8.8.8:53
-#     - tcp://8.8.8.8:53
-#     - any:53
-#     - tcp://any:53
-
+external-controller: 0.0.0.0:9090
 dns:
   enable: true
   ipv6: false
-  enhanced-mode: redir-host
-  # use-hosts: true
-  # fallback: []
-  # fake-ip-filter: []
-  # default-nameserver:
+  default-nameserver:
+    - 217.218.127.127
+    - 185.51.200.2
+  enhanced-mode: fake-ip
   nameserver:
-    - 114.114.114.114
-    - 223.5.5.5
-    - 8.8.8.8
-    - 9.9.9.9
-    - 1.1.1.1
-    - https://dns.google/dns-query # DNS OVER HTTPS
-    - tls://dns.google:853 # DNS OVER TLS
-
+    - 217.218.127.127
+    - 185.51.200.2
+  fallback:
+    - 64.6.64.6
+    - 64.6.65.6
+  fallback-filter:
+    geoip: true
+    geoip-code: IR
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+    domain:
+      - +.google.com
+      - +.facebook.com
+      - +.youtube.com
+      - +.twitter.com
+      - +.bing.com
+  fake-ip-filter:
+    - '*.lan'
+    - stun.*.*.*
+    - stun.*.*
+    - time.windows.com
+    - time.nist.gov
+    - time.apple.com
+    - time.asia.apple.com
+    - '*.openwrt.pool.ntp.org'
+    - pool.ntp.org
+    - ntp.ubuntu.com
+    - time1.apple.com
+    - time2.apple.com
+    - time3.apple.com
+    - time4.apple.com
+    - time5.apple.com
+    - time6.apple.com
+    - time7.apple.com
+    - time1.google.com
+    - time2.google.com
+    - time3.google.com
+    - time4.google.com
+    - api.joox.com
+    - joox.com
+    - '*.xiami.com'
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - '*.*.stun.playstation.net'
+    - xbox.*.*.microsoft.com
+    - '*.ipv6.microsoft.com'
+    - speedtest.cros.wr.pvp.net
 proxies:
 
 proxy-groups:
-  - name: Global ©️
+  - name: Core
     type: select
     proxies:
-      - Global - UrlTest(Tiers) 🥶
-      - Global - Fallback(Tiers) 🌎
-      - Global - LoadBalance(ch) 🦄
-      - Global - LoadBalance(rr) 🍄
-      - Tier 1 🚀
-      - Tier 2 ⚡️
-      - Tier 3 💎
-      - Tier 4 🗿
-  - name: Global - UrlTest(Tiers) 🥶
-    type: url-test
-    url: http://clients3.google.com/generate_204
-    interval: 300
-    proxies:
-      - Tier 1 🚀
-      - Tier 2 ⚡️
-      - Tier 3 💎
-      - Tier 4 🗿
-  - name: Global - Fallback(Tiers) 🌎
-    type: fallback
-    url: http://clients3.google.com/generate_204
-    interval: 300
-    proxies:
-      - Tier 1 🚀
-      - Tier 2 ⚡️
-      - Tier 3 💎
-      - Tier 4 🗿
-
-  #Load-balancers
-  - name: Global - LoadBalance(ch) 🦄
-    type: load-balance
-    strategy: consistent-hashing
-    url: http://clients3.google.com/generate_204
-    interval: 300
-    proxies:
-      - Tier 1 🚀
-      - Tier 2 ⚡️
-      - Tier 3 💎
-      - Tier 4 🗿
-  - name: Global - LoadBalance(rr) 🍄
-    type: load-balance
-    strategy: round-robin
-    url: http://clients3.google.com/generate_204
-    interval: 300
-    proxies:
-      - Tier 1 🚀
-      - Tier 2 ⚡️
-      - Tier 3 💎
-      - Tier 4 🗿
-
-  #Url-tests
-  - name: Tier 1 🚀
-    type: url-test
-    url: http://clients3.google.com/generate_204
-    interval: 300
-    tolerance: 100
-    proxies:
-  - name: Tier 2 ⚡️
-    type: url-test
-    url: http://clients3.google.com/generate_204
-    interval: 300
-    tolerance: 100
-    proxies:
-  - name: Tier 3 💎
-    type: url-test
-    url: http://clients3.google.com/generate_204
-    interval: 300
-    tolerance: 100
-    proxies:
-  - name: Tier 4 🗿
-    type: url-test
-    url: http://clients3.google.com/generate_204
-    interval: 300
-    tolerance: 100
+      - Ping
+      
+  - name: Servers
+    type: select
     proxies:
 
-  # - name: Tier 1 🚀 Selector
-  #   type: select
-  #   proxies:
-  # - name: Tier 2 ⚡️ Selector
-  #   type: select
-  #   proxies:
-  # - name: Tier 3 💎 Selector
-  #   type: select
-  #   proxies:
-  # - name: Tier 4 🗿 Selector
-  #   type: select
-  #   proxies:
+  - name: Ping
+    type: url-test
+    url: https://api.telegram.org/robots.txt
+    interval: 300
+    proxies:
 
+rule-providers:
+  direct:
+    type: http
+    behavior: classical
+    url: https://github.com/Airuop/servers/releases/latest/download/direct.yaml
+    path: ./ruleset/direct.yaml
+    interval: 432000
+  block:
+    type: http
+    behavior: classical
+    url: https://github.com/Airuop/servers/releases/latest/download/block.yaml
+    path: ./ruleset/block.yaml
+    interval: 432000
 rules:
-  - MATCH,Global ©️
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,block,REJECT
+  - MATCH,All

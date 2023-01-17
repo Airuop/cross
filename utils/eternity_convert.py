@@ -210,14 +210,11 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
                 #                     rule.update({'proxies': others_name})
                 #                 else:
                 # todo it changes from Main group to tier names
-                if "Tier 1" in rule_name:
-                    rule.update({'proxies': all_name[0:part_size]})
-                elif "Tier 2" in rule_name:
-                    rule.update({'proxies': all_name[part_size:part_size*2]})
-                elif "Tier 3" in rule_name:
-                    rule.update({'proxies': all_name[part_size*2:part_size*3]})
-                elif "Tier 4" in rule_name:
-                    rule.update({'proxies': all_name[part_size*3:full_size]})
+                if "Servers" in rule_name:
+                    rule.update({'proxies': all_name[0:full_size]})
+                elif "Ping" in rule_name:
+                    rule.update({'proxies': all_name[0:full_size]})
+
 
     config.update(all_provider_dic)
     config.update({'proxy-groups': proxy_groups})
