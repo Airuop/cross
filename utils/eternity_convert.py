@@ -212,6 +212,8 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
                 # todo it changes from Main group to tier names
                 if "Servers" in rule_name:
                     rule.update({'proxies': all_name[0:full_size]})
+                elif "Fallback" in rule_name:
+                    rule.update({'proxies': all_name[0:full_size]})
                 elif "Ping" in rule_name:
                     rule.update({'proxies': all_name[0:full_size]})
 
