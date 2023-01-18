@@ -217,7 +217,6 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
                 elif "Fallback" in rule_name:
                     rule.update({'proxies': all_name[0:full_size]})
 
-
     config.update(all_provider_dic)
     config.update({'proxy-groups': proxy_groups})
     config.update({'proxies': proxy_all})
