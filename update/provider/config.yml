@@ -67,13 +67,20 @@ proxy-groups:
   - name: Core
     type: select
     proxies:
+      - Fallback
       - Ping
       
   - name: Servers
     type: select
     proxies:
 
-  - name: Ping
+  - name: Fallback
+    type: fallback
+    url: https://api.telegram.org/robots.txt
+    interval: 300
+    proxies:
+    
+   - name: Ping
     type: url-test
     url: https://api.telegram.org/robots.txt
     interval: 300
