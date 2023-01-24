@@ -197,7 +197,7 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
     full_size = all_name.__len__()
     part_size = int(full_size / 4)
     last_size = full_size - (part_size * 3)
-    cardnames = ["-Fallback","-Ping"]
+    cardnames = ["Fallback","Ping"]
     for rule_name in proxy_group_fill:
         for rule in proxy_groups:
             if rule['name'] == rule_name:
