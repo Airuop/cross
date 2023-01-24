@@ -197,6 +197,8 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
     full_size = all_name.__len__()
     part_size = int(full_size / 4)
     last_size = full_size - (part_size * 3)
+    fi = """-Fallback
+        -Ping"""
     for rule_name in proxy_group_fill:
         for rule in proxy_groups:
             if rule['name'] == rule_name:
@@ -211,7 +213,7 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
                 #                 else:
                 # todo it changes from Main group to tier names
                 if "Core" in rule_name:
-                    rule.update({'proxies': all_name[2:full_size]})
+                    rule.update({'proxies': all_name[fi:full_size]})
                 elif "Fallback" in rule_name:
                     rule.update({'proxies': all_name[0:full_size]})
                 elif "Ping" in rule_name:
