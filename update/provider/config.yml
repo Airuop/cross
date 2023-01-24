@@ -70,8 +70,9 @@ proxy-groups:
    
   - name: Ping
     type: url-test
-    url: http://cachefly.cachefly.net/1mb.test
-    interval: 300
+    url: https://1.1.1.1/
+    interval: 200
+    tolerance: 50
     proxies:
 
 rule-providers:
