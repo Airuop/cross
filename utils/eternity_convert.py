@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@Airuop 
-Airuop
-/
-cross
-Public
-Cannot fork because you own this repository and are not a member of any organizations.
-Code
-Issues
-Pull requests
-Actions
-Security
-Insights
-Settings
-cross/utils/eternity_convert.py /
-@Airuop
-Airuop Update eternity_convert.py
-Latest commit 98d9070 4 minutes ago
- History
- 1 contributor
-264 lines (225 sloc)  9.41 KB
-
 import re
 import yaml
 import json
@@ -291,17 +262,3 @@ if __name__ == '__main__':
     eternity_convert(Eterniy_file, config_file, output=Eternity_yml_file)
     backup(Eterniy_file)
     sub_merge.readme_update(readme, sub_merge.read_list(sub_list_json))
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
