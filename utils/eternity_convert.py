@@ -191,7 +191,7 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
     proxy_groups = config['proxy-groups']
     proxy_group_fill = []
     for rule in proxy_groups:
-    proxy_group_fill.append(rule['name'])
+        proxy_group_fill.append(rule['name'])
 
     full_size = all_name.__len__()
     part_size = int(full_size / 4)
