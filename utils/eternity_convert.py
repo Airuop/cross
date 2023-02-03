@@ -79,7 +79,7 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
         f"removed_bad_char count => {removed_bad_char.__len__()} & log_lines_without_bad_char count => {log_lines_without_bad_char.__len__()}")
 
     # take a part from begining of all lines
-    num = 100
+    num = 200
     num = removed_bad_char.__len__() if removed_bad_char.__len__() <= num else num
 
     # convert the safe partition to yaml format
