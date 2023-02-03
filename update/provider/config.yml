@@ -78,13 +78,13 @@ rule-providers:
   direct:
     type: http
     behavior: classical
-    url: https://github.com/Airuop/servers/releases/latest/download/direct.yaml
+    url: https://raw.githubusercontent.com/Airuop/servers/main/rules/direct.yaml
     path: ./ruleset/direct.yaml
     interval: 432000
   block:
     type: http
     behavior: classical
-    url: https://github.com/Airuop/servers/releases/latest/download/block.yaml
+    url: https://raw.githubusercontent.com/Airuop/servers/main/rules/block.yaml
     path: ./ruleset/block.yaml
     interval: 432000
 rules:
