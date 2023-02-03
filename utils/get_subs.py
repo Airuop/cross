@@ -485,8 +485,32 @@ class subs:
                                                     cl_temp = yaml.safe_load(
                                                         str(cl_res[0]))
                                                     if cl_temp != None:
-                                                        safe_clash.append(
-                                                            cl_res)
+                                                        bad_uuid_format = False
+                                                        if 'uuid' in cl_temp:
+                                                            if cl_temp['uuid'].__len__() != 36:
+                                                                bad_uuid_format = True
+                                                        
+                                                        if bad_uuid_format == False:
+                                                            if cl_temp['type'] == "ss":
+                                                                if cl_temp["cipher"] != "chacha20-poly1305":
+                                                                    safe_clash.append(cl_res)
+                                                                    
+                                                                else:
+                                                                    bad_lines += 1
+
+                                                            elif cl_temp['type'] == "vmess":
+                                                                if cl_temp["network"] == "h2" or cl_temp["network"] == "grpc":
+                                                                    if "tls" in cl_temp and cl_temp['tls'] == False:
+                                                                        bad_lines += 1
+                                                                    else:
+                                                                        safe_clash.append(cl_res)
+                                                                        
+                                                                else:
+                                                                    safe_clash.append(cl_res)
+
+                                                            else:
+                                                                safe_clash.append(cl_res)
+                                                            
                                                 except Exception as e1:
                                                     bad_lines += 1
 
