@@ -278,6 +278,7 @@ class sub_merge():
                             f.close()
                         repo_amount_dic.setdefault(id, amount)
                         line = f'- [{remarks}]({repo_site}), number of nodes: `{amount}`\n'
+                        thanks.append(line)
                     # if remarks != "Airuop/cross":
                     #     thanks.append(line)
                 except FileNotFoundError:
@@ -354,7 +355,7 @@ class sub_merge():
                 break
         # 节点来源打印
         for index in range(len(lines)):
-            if lines[index] == '### node source\n':
+            if lines[index] == '### node sources\n':
                 # 清除旧内容
                 while lines[index+1] != '\n':
                     lines.pop(index+1)
