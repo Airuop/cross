@@ -52,13 +52,9 @@ jobs:
           
       - name: Commit Changes
         run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-          git config credential.helper store
-          git remote add upstream https://github.com/Airuop/cross/
-          git fetch upstream
-          git merge upstream/master
-          git push origin master
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git pull origin master
           git add ./sub
           git add ./utils/Country.mmdb
           git add README.md
@@ -75,13 +71,9 @@ jobs:
           
       - name: Commit changes
         run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-          git config credential.helper store
-          git remote add upstream https://github.com/Airuop/cross/
-          git fetch upstream
-          git merge upstream/master
-          git push origin master
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git pull origin master
           git add EternityBase
           git add Eternity
           git add Eternity.txt
@@ -102,13 +94,9 @@ jobs:
           
       - name: Commit changes
         run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-          git config credential.helper store
-          git remote add upstream https://github.com/Airuop/cross/
-          git fetch upstream
-          git merge upstream/master
-          git push origin master
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git pull origin master
           git add Eternity.yml
           git add Eternity
           git add ./update/*
