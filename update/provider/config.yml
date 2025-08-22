@@ -1,0 +1,141 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+profile:
+  store-selected: true  # Remember last used proxy
+  store-fake-ip: true   # Persist fake-IP mappings
+  
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16  # Explicit fake-IP range
+  nameserver:
+  - https://94.140.14.14/dns-query
+  - https://d.adguard-dns.com/dns-query/184bd938
+  - tls://184bd938.d.adguard-dns.com
+  - https://2tnc6zpc9c.cloudflare-gateway.com/dns-query
+  - tls://8.8.8.8:853
+  fallback:
+    - tls://8.8.4.4:853
+    - tls://1.0.0.1:853
+  
+proxies:
+
+proxy-groups:
+  - name: 'Core'
+    type: select
+    proxies:
+   
+  - name: 'Ping'
+    type: url-test
+    url: 'http://clients3.google.com/generate_204'
+    tolerance: 300
+    interval: 3600
+    proxies:
+
+rule-providers:
+  ir:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Airuop/servers/main/rules/ir.txt"
+    path: ./ruleset/ir.txt
+    interval: 604800
+  ads:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Airuop/servers/main/rules/ads.txt"
+    path: ./ruleset/ads.txt
+    interval: 604800
+  malware:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Airuop/servers/main/rules/malware.txt"
+    path: ./ruleset/malware.txt
+    interval: 604800
+  phishing:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Airuop/servers/main/rules/phishing.txt"
+    path: ./ruleset/phishing.txt
+    interval: 604800
+  cryptominers:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Airuop/servers/main/rules/cryptominers.txt"
+    path: ./ruleset/cryptominers.txt
+    interval: 604800
+  apps:
+    type: http
+    format: text
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Airuop/servers/main/rules/apps.txt"
+    path: ./ruleset/apps.txt
+    interval: 604800
+  ircidr:
+    type: http
+    format: text
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Airuop/servers/main/rules/ircidr.txt"
+    path: ./ruleset/ircidr.txt
+    interval: 604800
+  private:
+    type: http
+    format: text
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Airuop/servers/main/rules/private.txt"
+    path: ./ruleset/private.txt
+    interval: 604800
+  irasn:
+    type: http
+    format: text
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Airuop/servers/main/rules/irasn.txt"
+    path: ./ruleset/irasn.txt
+    interval: 604800
+  category-ads-all:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Airuop/servers/main/rules/category-ads-all.txt"
+    path: ./ruleset/category-ads-all.txt
+    interval: 604800
+  whitelist:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Airuop/servers/main/rules/direct.txt"
+    path: ./ruleset/whitelist.txt
+    interval: 604800
+  blacklist:
+    type: http
+    format: text
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Airuop/servers/main/rules/block.txt"
+    path: ./ruleset/blacklist.txt
+    interval: 604800
+
+rules :
+  - RULE-SET,private,DIRECT,no-resolve
+  - RULE-SET,apps,DIRECT
+  - RULE-SET,ads,REJECT
+  - RULE-SET,malware,REJECT
+  - RULE-SET,phishing,REJECT
+  - RULE-SET,cryptominers,REJECT
+  - RULE-SET,ir,DIRECT
+  - RULE-SET,ircidr,DIRECT
+  - RULE-SET,irasn,DIRECT
+  - RULE-SET,category-ads-all,REJECT
+  - RULE-SET,whitelist,DIRECT
+  - RULE-SET,blacklist,REJECT
+  - DOMAIN-SUFFIX,ir,DIRECT
+  - GEOIP,IR,DIRECT
+  - MATCH,Core

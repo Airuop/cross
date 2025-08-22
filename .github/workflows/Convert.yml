@@ -1,0 +1,63 @@
+name: Convert
+
+on:
+  workflow_dispatch:
+
+  push:
+    paths:
+      - "./EternityBase"
+      - "./sub/sub_merge_base64.txt"
+      - "./sub/sub_merge_yaml.yml"
+
+  schedule:
+    - cron: "0 0,12 * * *"
+
+jobs:
+  main:
+    name: Convert & Filter
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+    
+      - uses: actions/checkout@v4.2.2
+      
+      # - uses: actions/setup-node@v4.3.0
+      #   with:
+      #     node-version: "latest"
+          
+      # - uses: bahmutov/npm-install@v1.10.8
+      #   with:
+      #     working-directory: ./utils/localserver
+          
+      - uses: actions/setup-python@v5.5.0
+        with:
+          python-version: "3.11"
+          
+      - name: Set Timezone
+        run: sudo timedatectl set-timezone 'Asia/Tehran'
+      - name: Install Requirements
+        run: |
+          pip install -r ./utils/requirements.txt
+
+      - name: Run Convertor & Formatter
+        run: |
+          sleep 5
+          wget -O subconverter.tar.gz https://github.com/Airuop/cross/raw/refs/heads/master/utils/download/subconverter/releases/v0.9.0/subconverter_linux64.tar.gz
+          tar -zxvf subconverter.tar.gz -C ./
+          chmod +x ./subconverter/subconverter && nohup ./subconverter/subconverter >./subconverter.log 2>&1 &
+          python ./utils/eternity_convert.py
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git pull origin master
+          git add Eternity.yml
+          git add Eternity
+          git add README.md
+          git add ./update/*
+          git add LogInfo.txt
+          git commit -m "✔️ $(date '+%Y-%m-%d %H:%M:%S') Filtered"
+          git push --force
+
+      
