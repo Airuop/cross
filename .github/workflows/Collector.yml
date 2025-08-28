@@ -16,22 +16,14 @@ jobs:
   main:
     name: Collect & SpeedTest & Filter
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
     
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v5.0.0
       
-      # - uses: actions/setup-node@v4.3.0
-      #   with:
-      #     node-version: "latest"
-          
-      # - uses: bahmutov/npm-install@v1.10.8
-      #   with:
-      #     working-directory: ./utils/localserver
-          
-      - uses: actions/setup-python@v5.5.0
+      - uses: actions/setup-python@v5.6.0
         with:
-          python-version: "3.11"
+          python-version: "3.11.13"
           
       - name: Set Timezone
         run: sudo timedatectl set-timezone 'Asia/Tehran'
