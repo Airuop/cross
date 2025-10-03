@@ -16,12 +16,12 @@ jobs:
   main:
     name: Collect & SpeedTest & Filter
     runs-on: ubuntu-24.04
-    timeout-minutes: 90
+    #timeout-minutes: 90
     steps:
     
       - uses: actions/checkout@v5.0.0
       
-      - uses: actions/setup-python@v5.6.0
+      - uses: actions/setup-python@v6.0.0
         with:
           python-version: "3.11.13"
           
