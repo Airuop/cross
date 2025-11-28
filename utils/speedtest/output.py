@@ -87,7 +87,7 @@ def output(list, num):
 
 
 if __name__ == '__main__':
-    num = 200
+    num = 300
     print(f'start app for select {num} server...')
     value = read_json(out_json)
     output(value, value.__len__() if value.__len__() <= num else num)
