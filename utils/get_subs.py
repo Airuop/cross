@@ -368,6 +368,7 @@ class subs:
             corresponding_proxies=corresponding_list)
 
         print(f"\nfinal sub length => {corresponding_list.__len__()}")
+        print(corresponding_list)
 
         clash = list(map(lambda x: f"  - {x['c_clash']}", corresponding_list))
         mixed = list(map(lambda x: x["c_mixed"], corresponding_list))
