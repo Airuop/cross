@@ -19,7 +19,7 @@ valid_ss_plugins = ["obfs","v2ray-plugin"]
 
 class subs:
 
-    
+    @staticmethod
 
     def filter_non_local(items):
         """
@@ -195,7 +195,7 @@ class subs:
 
     # eject mixed proxies and use only clash
 
-    def get_subs_v3(content_urls: [], output_path="sub_merge_yaml", should_cleanup=True, specific_files_cleanup=["05.txt"]):
+    def get_subs_v3(content_urls: [], output_path="sub_merge_yaml", should_cleanup=True, specific_files_cleanup=["1105.txt"]):
         if content_urls == []:
             return
 
@@ -430,7 +430,7 @@ class subs:
             corresponding_proxies=corresponding_list)
 
         print(f"\n before validation sub length => {corresponding_list.__len__()}")
-        corresponding_list = (filter_non_local(corresponding_list))
+        corresponding_list = (subs.filter_non_local(corresponding_list))
         
         print(f"\nfinal sub length => {corresponding_list.__len__()}")
         # print(f"\nfinal sub content => {corresponding_list}")
