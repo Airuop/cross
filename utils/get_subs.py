@@ -5,6 +5,7 @@ import json
 import re
 import os
 import yaml
+import ipaddress
 
 sub_list_json = './sub/sub_list.json'
 sub_merge_path = './sub/'
@@ -17,6 +18,46 @@ valid_ss_cipher_methods = ["aes-128-gcm", "aes-192-gcm", "aes-256-gcm", "aes-128
 valid_ss_plugins = ["obfs","v2ray-plugin"]
 
 class subs:
+
+    
+
+    def filter_non_local(items):
+        """
+        Remove entries whose c_clash.server IP is:
+        - private
+        - loopback (127.x.x.x)
+        - link-local
+        - reserved
+        - multicast
+        - unspecified (0.0.0.0)
+        - invalid addresses
+        """
+        filtered = []
+    
+        for item in items:
+            server_ip = item.get("c_clash", {}).get("server")
+    
+            try:
+                ip_obj = ipaddress.ip_address(server_ip)
+    
+                # Remove all non-public or invalid types
+                if (
+                    ip_obj.is_private or
+                    ip_obj.is_loopback or
+                    ip_obj.is_link_local or
+                    ip_obj.is_reserved or
+                    ip_obj.is_multicast or
+                    ip_obj.is_unspecified     # catches 0.0.0.0
+                ):
+                    continue
+    
+            except ValueError:
+                # skip invalid IPs (e.g. empty, None, text)
+                continue
+    
+            filtered.append(item)
+    
+        return filtered
 
     def get_subs(content_urls: []):
         if content_urls == []:
