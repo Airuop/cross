@@ -428,9 +428,12 @@ class subs:
         ################  Fix Duplication  ################
         corresponding_list = subs_function.fix_proxies_duplication(
             corresponding_proxies=corresponding_list)
+
+        print(f"\n before validation sub length => {corresponding_list.__len__()}")
+        corresponding_list = (filter_non_local(corresponding_list))
         
         print(f"\nfinal sub length => {corresponding_list.__len__()}")
-        print(f"\nfinal sub content => {corresponding_list}")
+        # print(f"\nfinal sub content => {corresponding_list}")
 
 
         clash = list(map(lambda x: f"  - {x['c_clash']}", corresponding_list))
