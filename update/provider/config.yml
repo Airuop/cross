@@ -1,8 +1,20 @@
 mixed-port: 7890
 allow-lan: false
 mode: rule
-log-level: info
+log-level: warning
 external-controller: 127.0.0.1:9090
+tcp-concurrent: true
+tcp-fast-open: true
+udp-timeout: 120
+
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - any:53
+  auto-route: true
+  auto-detect-interface: true
+  mtu: 1500
 
 profile:
   store-selected: true  # Remember last used proxy
@@ -11,18 +23,48 @@ profile:
 dns:
   enable: true
   ipv6: false
+  listen: 0.0.0.0:5353
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16  # Explicit fake-IP range
+  fake-ip-filter:
+  - "*.ir"
+  - "+.local"
+  default-nameserver:
+  - 185.51.200.2 # Shecan DNS
+  - 178.22.122.100 # Shecan DNS
+  - 78.157.42.100
+  - 78.157.42.101
   nameserver:
   - https://94.140.14.14/dns-query
-  - https://d.adguard-dns.com/dns-query/184bd938
   - tls://184bd938.d.adguard-dns.com
+  - https://d.adguard-dns.com/dns-query/184bd938
   - https://2tnc6zpc9c.cloudflare-gateway.com/dns-query
-  - tls://8.8.8.8:853
+  - https://1.1.1.1/dns-query
+  - https://dns.google/dns-query
   fallback:
-    - tls://8.8.4.4:853
-    - tls://1.0.0.1:853
-  
+  - https://doh.dns.sb/dns-query
+  - https://dns.quad9.net/dns-query
+
+  fallback-filter:
+    geoip: true
+    geoip-code: IR
+    ipcidr:
+      - 0.0.0.0/8
+      - 10.0.0.0/8
+      - 100.64.0.0/10
+      - 127.0.0.0/8
+      - 169.254.0.0/16
+      - 172.16.0.0/12
+      - 192.0.0.0/24
+      - 192.0.2.0/24
+      - 192.168.0.0/16
+      - 198.18.0.0/15
+      - 198.51.100.0/24
+      - 203.0.113.0/24
+      - 224.0.0.0/4
+      - 240.0.0.0/4
+      - 255.255.255.255/32
+
 proxies:
 
 proxy-groups:
@@ -35,6 +77,8 @@ proxy-groups:
     url: 'http://clients3.google.com/generate_204'
     tolerance: 300
     interval: 3600
+    lazy: false
+    disable-udp: false
     proxies:
 
 rule-providers:
@@ -137,5 +181,10 @@ rules :
   - RULE-SET,whitelist,DIRECT
   - RULE-SET,blacklist,REJECT
   - DOMAIN-SUFFIX,ir,DIRECT
+  - DOMAIN-SUFFIX,instagram.com,Core
+  - DOMAIN-SUFFIX,cloudflare.com,Core
+  - DOMAIN-SUFFIX,twitter.com,Core
+  - DOMAIN-SUFFIX,telegram.org,Core
+  - DOMAIN-SUFFIX,t.me,Core
   - GEOIP,IR,DIRECT
   - MATCH,Core
