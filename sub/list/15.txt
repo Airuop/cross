@@ -1,155 +1,131 @@
-  - {name: 🇨🇦 Canada-05656, server: 23.162.200.227, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 23.162.200.227, network: ws, ws-opts: {path: /linkvws, headers: {Host: 23.162.200.227}}}
-  - {name: 🇩🇪 Germany-04283, server: 82.198.246.9, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 USA-00109, server: 108.181.0.177, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: G5p6ww4o67HB}
-  - {name: 🇺🇸 USA-00798, server: 38.110.1.246, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 USA-00158, server: 37.19.198.244, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
-  - {name: 🇨🇦 Canada-00131, server: 137.184.174.93, port: 8080, type: ss, cipher: rc4-md5, password: 14fFPrbezE3HDZzsMOr6}
-  - {name: 🇺🇸 USA-00797, server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇨🇦 Canada-07139, server: 158.51.121.63, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 158.51.121.63, network: ws, ws-opts: {path: linkvws, headers: {Host: 158.51.121.63}}}
-  - {name: 🇺🇸 USA-11398, server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 USA-07144, server: 107.161.82.89, port: 59912, type: vmess, uuid: bda619b6-c5e7-444a-aed7-4d8716237bd7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /arki, headers: {Host: 107.161.82.89}}}
-  - {name: 🇺🇸 USA-07141, server: 38.91.107.49, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 USA-07188, server: 129.146.143.80, port: 48111, type: vmess, uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 USA-07190, server: 129.146.77.248, port: 39495, type: vmess, uuid: f836c736-87fc-4fde-aabc-00857ecdff3e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: 129.146.77.248}}}
-  - {name: 🇺🇸 USA-00165, server: 13.59.31.133, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
-  - {name: 🇺🇸 USA-00153, server: 37.19.198.160, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
-  - {name: 🇺🇸 USA-04307, server: 128.242.109.20, port: 17432, type: vmess, uuid: 6cc4a312-2d18-4694-b92d-0af1c039e697, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /arki, headers: {Host: 128.242.109.20}}}
-  - {name: 🇨🇦 Canada-04318, server: 134.195.196.211, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 USA-04377, server: 165.140.216.141, port: 443, type: vmess, uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 USA-00799, server: 84.17.41.2, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 USA-04308, server: 107.161.82.89, port: 27489, type: vmess, uuid: 1f111c76-69ce-4fa9-a55c-1ae21cd1ab2a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /arki, headers: {Host: 107.161.82.89}}}
-  - {name: 🇺🇸 USA-00111, server: 173.244.56.9, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
-  - {name: 🇺🇸 USA-00110, server: 173.244.56.6, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
-  - {name: 🇨🇦 Canada-00108, server: 108.181.118.10, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: G5p6ww4o67HB}
-  - {name: 🇨🇦 Canada-05655, server: 158.51.121.63, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 158.51.121.63, network: ws, ws-opts: {path: linkvws, headers: {Host: seribus.org}}}
-  - {name: 🇺🇸 USA-04306, server: 107.161.82.89, port: 59284, type: vmess, uuid: bd16ed8f-a5bd-47ea-a69a-651fc70e92ac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /arki, headers: {Host: 107.161.82.89}}}
-  - {name: 🇺🇸 USA-04316, server: 64.94.95.118, port: 57142, type: trojan, password: kkzh2prsyr2ik47as615, skip-cert-verify: false}
-  - {name: 🇩🇪 Germany-02263, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 USA-04309, server: 67.220.85.46, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇩🇪 Germany-04284, server: 82.198.246.233, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇩🇪 Germany-02279, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇨🇦 Canada-00112, server: 149.22.95.183, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
-  - {name: 🇺🇸 USA-00210, server: 156.146.38.169, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
-  - {name: 🇳🇱 Netherlands-00170, server: 108.181.58.239, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: CJmTCCx7Ltud}
-  - {name: 🇫🇷 France-07967, server: 137.74.119.18, port: 10443, type: ss, cipher: chacha20-ietf-poly1305, password: diOMBU5IDvJcFqyNPbRjYR}
-  - {name: 🇩🇪 Germany-07846, server: 185.226.172.8, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}
-  - {name: 🇳🇱 Netherlands-00167, server: 108.181.126.122, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: CJmTCCx7Ltud}
-  - {name: 🇮🇪 Ireland-04285, server: 146.70.90.197, port: 57452, type: trojan, password: t1k169n5zmvvwn96r9ft, skip-cert-verify: false}
-  - {name: 🇬🇧 UK-00122, server: 82.38.31.15, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇬🇧 UK-00173, server: 82.38.31.214, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-00145, server: 82.38.31.184, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-00132, server: 82.38.31.202, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-07950, server: 82.38.31.183, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-07769, server: 82.38.31.11, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇬🇧 UK-00147, server: 82.38.31.187, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇳🇱 Netherlands-00171, server: 193.29.139.151, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇬🇧 UK-00148, server: 82.38.31.155, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇬🇧 UK-00166, server: 82.38.31.192, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-00146, server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-00196, server: 82.38.31.35, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇯🇵 Japan-10827, server: 172.111.146.64, port: 80, type: vmess, uuid: 05b8c783-7f59-47f9-9923-06a465679f6a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: 172.111.146.64}}}
-  - {name: 🇹🇷 Turkey-07169, server: 5.188.190.252, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇹🇷 Turkey-07778, server: 185.39.204.161, port: 33563, type: ss, cipher: chacha20-ietf-poly1305, password: a9FUnGJH7b8e5jFbFclfX2}
-  - {name: 🇬🇧 UK-00149, server: 82.38.31.208, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-00273, server: 82.38.31.179, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇺🇸 USA-00211, server: 156.146.38.167, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
-  - {name: 🇬🇧 UK-00203, server: 82.38.31.216, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇳🇱 Netherlands-00120, server: 193.29.139.204, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇩🇪 Germany-00251, server: 213.202.208.199, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG}
-  - {name: 🇺🇸 USA-00209, server: 156.146.38.168, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
-  - {name: 🇬🇧 UK-07944, server: 82.38.31.204, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇺🇸 USA-00212, server: 156.146.38.170, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
-  - {name: 🇩🇪 Germany-00207, server: 185.137.157.156, port: 443, type: trojan, password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q, skip-cert-verify: false}
-  - {name: 🇩🇪 Germany-00208, server: 185.137.157.140, port: 443, type: trojan, password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q, skip-cert-verify: false}
-  - {name: 🇬🇧 UK-00200, server: 82.38.31.199, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-00201, server: 82.38.31.194, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇯🇵 Japan-04357, server: 45.76.202.45, port: 4010, type: vmess, uuid: 071a8a71-c656-4fb6-a908-4e42eb72243d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /liksuzcp, headers: {Host: 45.76.202.45}}}
-  - {name: 🇬🇧 UK-07911, server: 82.38.31.195, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇳🇱 Netherlands-00178, server: 158.173.20.171, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
-  - {name: 🇬🇧 UK-00250, server: 82.38.31.16, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇬🇧 UK-07843, server: 82.38.31.198, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-07855, server: 82.38.31.47, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇯🇵 Japan-00736, server: 13.115.229.63, port: 443, type: trojan, password: CF68213490, skip-cert-verify: false}
-  - {name: 🇯🇵 Japan-00737, server: 35.72.9.75, port: 443, type: trojan, password: CF68213490, skip-cert-verify: false}
-  - {name: 🇬🇧 UK-08032, server: 82.38.31.190, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇯🇵 Japan-00738, server: 43.207.117.135, port: 443, type: trojan, password: CF68213490, skip-cert-verify: false}
-  - {name: 🇬🇧 UK-07812, server: 82.38.31.200, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-00249, server: 82.38.31.17, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇯🇵 Japan-00739, server: 52.195.207.214, port: 443, type: trojan, password: CF68213490, skip-cert-verify: false}
-  - {name: 🇳🇱 Netherlands-00128, server: 193.29.139.235, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇬🇧 UK-07786, server: 82.38.31.212, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-07767, server: 82.38.31.29, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇬🇧 UK-07753, server: 82.38.31.203, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-07760, server: 82.38.31.213, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-07757, server: 158.173.24.73, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
-  - {name: 🇯🇵 Japan-09484, server: 52.194.192.245, port: 443, type: trojan, password: PI36027154, skip-cert-verify: false}
-  - {name: 🇬🇧 UK-00189, server: 82.38.31.176, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-00217, server: 82.38.31.218, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇺🇸 USA-07191, server: 129.146.77.248, port: 39495, type: vmess, uuid: f836c736-87fc-4fde-aabc-00857ecdff3e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: 129.146.77.248}}}
-  - {name: 🇬🇧 UK-00155, server: 82.38.31.205, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-00141, server: 82.38.31.57, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇬🇧 UK-00142, server: 82.38.31.149, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇬🇧 UK-00252, server: 82.38.31.189, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇩🇪 Germany-00259, server: 185.137.157.135, port: 443, type: trojan, password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q, skip-cert-verify: false}
-  - {name: 🇯🇵 Japan-07143, server: 161.33.139.138, port: 58905, type: vmess, uuid: 1610f8dc-0661-4032-ac6a-a7250603f608, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /1610f8dc-0661-4032-ac6a-a7250603f608-vm, headers: {Host: 161.33.139.138}}}
-  - {name: 🇩🇪 Germany-00172, server: 209.46.102.22, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: 1hhrqrokj3ag}
-  - {name: 🇮🇪 Ireland-08978, server: 146.70.90.198, port: 57452, type: trojan, password: t1k169n5zmvvwn96r9ft, skip-cert-verify: false}
-  - {name: 🇩🇪 Germany-04323, server: 94.103.167.116, port: 80, type: vmess, uuid: d1b0c103-a7ff-4bd6-887d-a73d6ebf1f50, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇩🇪 Germany-00206, server: 185.137.157.142, port: 443, type: trojan, password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q, skip-cert-verify: false}
-  - {name: 🇺🇸 USA-07148, server: 31.77.149.131, port: 110, type: vmess, uuid: 5ed7206a-cd8d-4b02-add1-4f7b787178c9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇯🇵 Japan-07186, server: 161.33.139.138, port: 58905, type: vmess, uuid: 1610f8dc-0661-4032-ac6a-a7250603f608, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /1610f8dc-0661-4032-ac6a-a7250603f608-vm, headers: {Host: 161.33.139.138}}}
-  - {name: 🇳🇱 Netherlands-00157, server: 109.201.152.181, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks}
-  - {name: 🇬🇧 UK-00218, server: 82.38.31.217, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇨🇦 Canada-00794, server: 23.162.200.198, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇬🇧 UK-00204, server: 82.38.31.219, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-07870, server: 82.38.31.211, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-00160, server: 82.38.31.186, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-00163, server: 82.38.31.191, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-07756, server: 82.38.31.32, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇬🇧 UK-07865, server: 82.38.31.185, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-07748, server: 82.38.31.215, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇬🇧 UK-08004, server: 82.38.31.181, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
-  - {name: 🇦🇺 Australia-00188, server: 104.156.233.234, port: 27116, type: ss, cipher: chacha20-ietf-poly1305, password: bIOoi5TuImG2KccxV7-jcA7Cez+vun-c_E}
-  - {name: 🇬🇧 UK-00195, server: 94.156.250.148, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG}
-  - {name: 🇰🇷 South-Korea-08028, server: 141.164.45.187, port: 8888, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
-  - {name: 🇰🇿 Kazakhstan-07202, server: 38.107.234.57, port: 80, type: vmess, uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: 38.107.234.57}}}
-  - {name: 🇸🇦 Saudi-Arabia-00213, server: 149.104.104.58, port: 443, type: trojan, password: S.ibYdZshHTF-ne.M+.Fznp_-hyFFnCSix, skip-cert-verify: false}
-  - {name: 🇸🇬 Singapore-00740, server: 54.255.216.250, port: 443, type: trojan, password: CF68213490, skip-cert-verify: false}
-  - {name: 🇿🇦 South-Africa-00192, server: 102.133.165.160, port: 16233, type: ss, cipher: chacha20-ietf-poly1305, password: Xsy8Ox4yOV3xLlpxtjzs3X}
-  - {name: 🇸🇬 Singapore-04293, server: 103.36.91.32, port: 8388, type: ss, cipher: chacha20-ietf, password: asd123456}
-  - {name: 🇰🇷 South-Korea-07206, server: 132.145.80.230, port: 80, type: vmess, uuid: 5155860e-d07d-46c3-9128-3afbd84626c7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: 132.145.80.230}}}
-  - {name: 🇰🇷 South-Korea-07204, server: 132.145.80.230, port: 80, type: vmess, uuid: 5155860e-d07d-46c3-9128-3afbd84626c7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: kr02.a0a.xyz}}}
-  - {name: 🇬🇧 UK-00796, server: 66.163.117.58, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇩🇪 Germany-08010, server: 57.129.121.230, port: 10443, type: ss, cipher: chacha20-ietf-poly1305, password: uROuEqsL8IUMMVb4wDwnGU}
-  - {name: 🇸🇬 Singapore-00795, server: 149.88.23.202, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇸 USA-00202, server: 38.54.64.247, port: 443, type: trojan, password: ks3og6wZ9kH8UJv1bmpvwXbfgDNNaTd1Lk, skip-cert-verify: false}
-  - {name: 🇺🇸 USA-00193, server: 38.54.80.160, port: 16292, type: ss, cipher: chacha20-ietf-poly1305, password: r_NRe-+WRq2zVqMpCnJtTESlT8WyffHyFy}
-  - {name: 🇸🇬 Singapore-08003, server: 103.106.229.69, port: 9090, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
-  - {name: 🇨🇦 Canada-05658, server: 134.195.198.147, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 134.195.198.147, network: ws, ws-opts: {path: /linkvws, headers: {Host: inna.cfd}}}
-  - {name: 🇯🇵 Japan-07203, server: 140.83.51.161, port: 25686, type: vmess, uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: jp02.a0a.xyz}}}
-  - {name: 🇺🇸 USA-07179, server: 216.106.183.35, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇸🇬 Singapore-04297, server: 149.88.23.207, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇸🇬 Singapore-04362, server: 13.214.178.3, port: 443, type: vmess, uuid: 714d82c3-184d-457b-bbb3-d8ad3861e5ef, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess, headers: {Host: 13.214.178.3}}}
-  - {name: 🇰🇷 South-Korea-04359, server: 150.109.240.179, port: 8443, type: vmess, uuid: f9dcb303-3e73-40eb-9327-1ac88f9a2b72, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 150.109.240.179, network: ws, ws-opts: {path: /wsproxy, headers: {Host: 150.109.240.179}}}
-  - {name: 🇰🇷 South-Korea-00179, server: 141.164.45.187, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS}
-  - {name: 🇰🇿 Kazakhstan-10855, server: 38.107.234.57, port: 80, type: vmess, uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: 3h-kazakhstan1.09vpn.com}}}
-  - {name: 🇺🇸 USA-07180, server: 216.106.185.141, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇰🇷 South-Korea-00177, server: 141.164.45.187, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG}
-  - {name: 🇵🇱 Poland-08044, server: 92.118.205.211, port: 5600, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
-  - {name: 🇨🇳 Taiwan-04350, server: 165.154.195.38, port: 35034, type: vmess, uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇯🇵 Japan-07199, server: 140.83.51.161, port: 25686, type: vmess, uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: 140.83.51.161}}}
-  - {name: 🇰🇷 South-Korea-11432, server: 140.238.2.250, port: 443, type: vmess, uuid: 41a7089a-040b-4538-8b8d-010902405bde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇯🇵 Japan-07198, server: 140.83.51.161, port: 25686, type: vmess, uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: 140.83.51.161}}}
-  - {name: 🇫🇷 France-00191, server: 38.60.168.129, port: 443, type: trojan, password: Lw_DP4+W.J5K33MD2Jy5zQVuT5n71+=BcD, skip-cert-verify: false}
-  - {name: 🇹🇷 Turkey-07827, server: 77.83.245.116, port: 9753, type: ss, cipher: chacha20-ietf-poly1305, password: 7exNiN1wA7fVCOV8YdOvBN}
-  - {name: 🇰🇷 South-Korea-00233, server: 211.178.105.134, port: 6123, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@}
-  - {name: 🇹🇷 Turkey-00184, server: 83.217.9.17, port: 25232, type: ss, cipher: chacha20-ietf-poly1305, password: 0GAK2b9gkqBatuxi2cswmH}
-  - {name: 🇿🇦 South-Africa-00194, server: 102.37.156.224, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: aduB9HGxQHjA2SBMRjkHX6}
-  - {name: Seychelles-04376, server: 45.205.31.175, port: 10086, type: vmess, uuid: 33f38758-81d2-43b0-a74a-2d7c70ea27c8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 45.205.31.175}
-  - {name: 🇬🇧 UK-07771, server: 82.38.31.3, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: Seychelles-07197, server: 45.205.31.175, port: 443, type: vmess, uuid: 79e0df31-8ed5-4213-9fff-292a9fbeae7b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 45.205.31.175, network: ws, ws-opts: {path: /ws, headers: {Host: 45.205.31.175}}}
-  - {name: 🇬🇧 UK-00220, server: 82.38.31.2, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇬🇧 UK-00222, server: 82.38.31.7, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
-  - {name: 🇮🇳 India-00215, server: 152.67.8.205, port: 80, type: vmess, uuid: 9db4c708-aef8-4359-821b-38e47990be0d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 152.67.8.205}}}
-  - {name: 🇩🇪 Germany-02265, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇧🇬 Bulgaria-08021, server: 38.244.132.14, port: 5499, type: ss, cipher: aes-256-gcm, password: lGqs95QkFHo2NV}
+  - {name: 🇨🇦 Canada-00134, server: 149.22.95.183, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 🇩🇪 Germany-02410, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 USA-00053, server: 37.19.198.160, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 🇺🇸 USA-07326, server: 143.198.235.98, port: 30080, type: vmess, uuid: d76c0edb-8097-4371-8d97-722723756012, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vm, headers: {Host: 143.198.235.98}}}
+  - {name: 🇺🇸 USA-00079, server: 173.244.56.6, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 🇨🇦 Canada-00056, server: 108.181.118.10, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: G5p6ww4o67HB}
+  - {name: 🇺🇸 USA-07305, server: 129.146.77.248, port: 39495, type: vmess, uuid: f836c736-87fc-4fde-aabc-00857ecdff3e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: 129.146.77.248}}}
+  - {name: 🇺🇸 USA-00052, server: 13.59.31.133, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: 🇺🇸 USA-00046, server: 37.19.198.244, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 🇺🇸 USA-00049, server: 37.19.198.243, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 🇨🇦 Canada-07272, server: 158.51.121.63, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 158.51.121.63, network: ws, ws-opts: {path: linkvws, headers: {Host: 158.51.121.63}}}
+  - {name: 🇺🇸 USA-00054, server: 108.181.0.177, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: G5p6ww4o67HB}
+  - {name: 🇺🇸 USA-00917, server: 84.17.41.2, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 USA-00366, server: 18.190.176.112, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: 🇺🇸 USA-00916, server: 38.110.1.246, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇩🇪 Germany-02396, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 USA-04437, server: 107.161.82.89, port: 59284, type: vmess, uuid: bd16ed8f-a5bd-47ea-a69a-651fc70e92ac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /arki, headers: {Host: 107.161.82.89}}}
+  - {name: 🇺🇸 USA-04508, server: 165.140.216.141, port: 443, type: vmess, uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇨🇦 Canada-04492, server: 137.184.174.93, port: 8080, type: ss, cipher: rc4-md5, password: 14fFPrbezE3HDZzsMOr6}
+  - {name: 🇺🇸 USA-00819, server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 USA-00044, server: 156.146.38.169, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 🇺🇸 USA-00047, server: 156.146.38.170, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 🇯🇵 Japan-07275, server: 161.33.139.138, port: 58905, type: vmess, uuid: 1610f8dc-0661-4032-ac6a-a7250603f608, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /1610f8dc-0661-4032-ac6a-a7250603f608-vm, headers: {Host: 161.33.139.138}}}
+  - {name: 🇦🇺 Australia-00208, server: 104.156.233.234, port: 27116, type: ss, cipher: chacha20-ietf-poly1305, password: bIOoi5TuImG2KccxV7-jcA7Cez+vun-c_E}
+  - {name: 🇬🇧 UK-07857, server: 82.38.31.203, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇰🇷 South-Korea-04485, server: 221.139.79.57, port: 13979, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@}
+  - {name: 🇳🇱 Netherlands-00135, server: 109.201.152.181, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks}
+  - {name: 🇬🇧 UK-00066, server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇨🇦 Canada-05792, server: 134.195.198.147, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 134.195.198.147, network: ws, ws-opts: {path: /linkvws, headers: {Host: inna.cfd}}}
+  - {name: 🇬🇧 UK-00078, server: 82.38.31.194, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇩🇪 Germany-00243, server: 213.202.208.199, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG}
+  - {name: 🇳🇱 Netherlands-00081, server: 193.29.139.204, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇬🇧 UK-00235, server: 82.38.31.219, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-00080, server: 82.38.31.35, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇬🇧 UK-00075, server: 82.38.31.214, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-00068, server: 82.38.31.15, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇬🇧 UK-07858, server: 82.38.31.181, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇺🇸 USA-00048, server: 156.146.38.167, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 🇨🇦 Canada-00912, server: 23.162.200.198, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 UK-00060, server: 146.70.61.37, port: 8080, type: ss, cipher: rc4-md5, password: 14fFPrbezE3HDZzsMOr6}
+  - {name: 🇬🇧 UK-07863, server: 82.38.31.206, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-04454, server: 82.38.31.218, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇰🇷 South-Korea-04486, server: 218.237.185.230, port: 4652, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@}
+  - {name: 🇬🇧 UK-07920, server: 82.38.31.198, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇺🇸 USA-00045, server: 156.146.38.168, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 🇬🇧 UK-00067, server: 82.38.31.155, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇯🇵 Japan-00121, server: 35.72.9.75, port: 443, type: trojan, password: CF68213490, skip-cert-verify: false}
+  - {name: 🇨🇦 Canada-04449, server: 134.195.196.211, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 UK-07940, server: 82.38.31.47, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇬🇧 UK-07824, server: 82.38.31.185, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-07831, server: 82.38.31.32, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇰🇷 South-Korea-07934, server: 141.164.45.187, port: 8888, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
+  - {name: 🇳🇱 Netherlands-04408, server: 158.173.20.171, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 🇬🇧 UK-07856, server: 82.38.31.29, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇩🇪 Germany-00216, server: 185.137.157.156, port: 443, type: trojan, password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q, skip-cert-verify: false}
+  - {name: 🇯🇵 Japan-09493, server: 52.194.192.245, port: 443, type: trojan, password: PI36027154, skip-cert-verify: false}
+  - {name: 🇰🇷 South-Korea-07329, server: 132.145.80.230, port: 80, type: vmess, uuid: 5155860e-d07d-46c3-9128-3afbd84626c7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: kr02.a0a.xyz}}}
+  - {name: 🇯🇵 Japan-00118, server: 13.115.229.63, port: 443, type: trojan, password: CF68213490, skip-cert-verify: false}
+  - {name: 🇫🇷 France-07982, server: 137.74.119.18, port: 10443, type: ss, cipher: chacha20-ietf-poly1305, password: diOMBU5IDvJcFqyNPbRjYR}
+  - {name: 🇸🇬 Singapore-07851, server: 103.106.229.69, port: 9090, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
+  - {name: 🇰🇷 South-Korea-07330, server: 132.145.80.230, port: 80, type: vmess, uuid: 5155860e-d07d-46c3-9128-3afbd84626c7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: 132.145.80.230}}}
+  - {name: 🇯🇵 Japan-00103, server: 43.207.117.135, port: 443, type: trojan, password: CF68213490, skip-cert-verify: false}
+  - {name: 🇯🇵 Japan-00088, server: 52.195.207.214, port: 443, type: trojan, password: CF68213490, skip-cert-verify: false}
+  - {name: 🇯🇵 Japan-04484, server: 45.76.202.45, port: 4010, type: vmess, uuid: 071a8a71-c656-4fb6-a908-4e42eb72243d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /liksuzcp, headers: {Host: 45.76.202.45}}}
+  - {name: 🇯🇵 Japan-07333, server: 140.83.51.161, port: 25686, type: vmess, uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: 140.83.51.161}}}
+  - {name: 🇯🇵 Japan-07334, server: 168.138.43.75, port: 80, type: vmess, uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: jp01.a0a.xyz}}}
+  - {name: 🇯🇵 Japan-00189, server: 149.22.87.241, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 🇰🇷 South-Korea-04425, server: 211.178.105.134, port: 6123, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@}
+  - {name: 🇧🇬 Bulgaria-07879, server: 38.244.132.14, port: 5499, type: ss, cipher: aes-256-gcm, password: lGqs95QkFHo2NV}
+  - {name: 🇲🇾 Malaysia-04438, server: 47.250.135.244, port: 10000, type: vmess, uuid: aedc66b8-99d7-4a21-8310-61870e7f870d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇵🇱 Poland-07928, server: 92.118.205.211, port: 5600, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
+  - {name: 🇯🇵 Japan-07332, server: 140.83.51.161, port: 25686, type: vmess, uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: jp02.a0a.xyz}}}
+  - {name: 🇰🇷 South-Korea-04487, server: 150.109.240.179, port: 8443, type: vmess, uuid: f9dcb303-3e73-40eb-9327-1ac88f9a2b72, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 150.109.240.179, network: ws, ws-opts: {path: /wsproxy, headers: {Host: 150.109.240.179}}}
+  - {name: 🇺🇸 USA-07324, server: 31.77.149.131, port: 110, type: vmess, uuid: 5ed7206a-cd8d-4b02-add1-4f7b787178c9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇯🇵 Japan-07335, server: 168.138.43.75, port: 80, type: vmess, uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: 168.138.43.75}}}
+  - {name: 🇯🇵 Japan-00191, server: 149.22.87.240, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 🇯🇵 Japan-07338, server: 168.138.43.75, port: 80, type: vmess, uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: 168.138.43.75}}}
+  - {name: 🇨🇳 Taiwan-04479, server: 165.154.195.38, port: 35034, type: vmess, uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇯🇵 Japan-07331, server: 140.83.51.161, port: 25686, type: vmess, uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: 140.83.51.161}}}
+  - {name: 🇯🇵 Japan-00193, server: 149.22.87.204, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 🇩🇪 Germany-00200, server: 209.46.102.22, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: 1hhrqrokj3ag}
+  - {name: 🇲🇩 Moldova-00204, server: 94.131.108.36, port: 443, type: vmess, uuid: 9855f1f0-a800-40d4-8b38-c7d3eb79302d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 94.131.108.36}}}
+  - {name: 🇿🇦 South-Africa-00202, server: 102.37.156.224, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: aduB9HGxQHjA2SBMRjkHX6}
+  - {name: 🇮🇪 Ireland-04416, server: 146.70.90.197, port: 57452, type: trojan, password: t1k169n5zmvvwn96r9ft, skip-cert-verify: false}
+  - {name: 🇮🇪 Ireland-09143, server: 146.70.90.198, port: 57452, type: trojan, password: t1k169n5zmvvwn96r9ft, skip-cert-verify: false}
+  - {name: 🇰🇷 South-Korea-00190, server: 141.164.45.187, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS}
+  - {name: 🇰🇷 South-Korea-00192, server: 141.164.45.187, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG}
+  - {name: 🇿🇦 South-Africa-00203, server: 102.133.165.160, port: 16233, type: ss, cipher: chacha20-ietf-poly1305, password: Xsy8Ox4yOV3xLlpxtjzs3X}
+  - {name: 🇰🇷 South-Korea-03226, server: 152.67.218.38, port: 443, type: vmess, uuid: b5e9480a-b7aa-40a4-f9a7-5299b5e363b4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 152.67.218.38}}}
+  - {name: 🇯🇵 Japan-07337, server: 168.138.43.75, port: 80, type: vmess, uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: None}}}
+  - {name: 🇬🇧 UK-04434, server: 66.163.117.58, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 UK-00206, server: 94.156.250.148, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG}
+  - {name: 🇬🇧 UK-07855, server: 82.38.31.3, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇬🇧 UK-00232, server: 82.38.31.2, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇰🇷 South-Korea-04488, server: 146.56.112.110, port: 8888, type: vmess, uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇬🇧 UK-00058, server: 82.38.31.10, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇺🇸 USA-00222, server: 38.54.64.247, port: 443, type: trojan, password: ks3og6wZ9kH8UJv1bmpvwXbfgDNNaTd1Lk, skip-cert-verify: false}
+  - {name: 🇮🇳 India-04481, server: 152.67.8.205, port: 80, type: vmess, uuid: 9db4c708-aef8-4359-821b-38e47990be0d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 152.67.8.205}}}
+  - {name: 🇬🇧 UK-07847, server: 82.38.31.11, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇬🇧 UK-07921, server: 82.38.31.193, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇰🇿 Kazakhstan-10875, server: 38.107.234.57, port: 80, type: vmess, uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc}}}
+  - {name: 🇰🇿 Kazakhstan-10876, server: 38.107.234.57, port: 80, type: vmess, uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: 38.107.234.57}}}
+  - {name: 🇬🇧 UK-07868, server: 82.38.31.212, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-00229, server: 82.38.31.176, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇫🇷 France-00210, server: 38.60.168.129, port: 443, type: trojan, password: Lw_DP4+W.J5K33MD2Jy5zQVuT5n71+=BcD, skip-cert-verify: false}
+  - {name: 🇬🇧 UK-07834, server: 82.38.31.213, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇸🇦 Saudi-Arabia-00462, server: 149.104.104.58, port: 443, type: trojan, password: S.ibYdZshHTF-ne.M+.Fznp_-hyFFnCSix, skip-cert-verify: false}
+  - {name: 🇬🇧 UK-00057, server: 82.38.31.179, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-07818, server: 82.38.31.204, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-07820, server: 82.38.31.211, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-00064, server: 82.38.31.149, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇸🇬 Singapore-04422, server: 149.88.23.207, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇳🇱 Netherlands-00069, server: 193.29.139.235, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇬🇧 UK-08067, server: 82.38.31.190, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-00072, server: 82.38.31.205, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-00082, server: 82.38.31.184, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-00225, server: 82.38.31.35, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇸🇬 Singapore-00820, server: 149.88.23.202, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇰🇿 Kazakhstan-11362, server: 38.107.234.57, port: 80, type: vmess, uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: 3h-kazakhstan1.09vpn.com}}}
+  - {name: 🇳🇴 Norway-04423, server: 185.213.23.63, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=}
+  - {name: 🇬🇧 UK-07951, server: 82.38.31.207, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇳🇱 Netherlands-10527, server: 213.109.147.242, port: 62685, type: ss, cipher: chacha20-ietf-poly1305, password: VpKABcOpNNA0l5G2AVOmw8}
+  - {name: 🇬🇧 UK-00231, server: 82.38.31.7, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇸🇬 Singapore-00182, server: 54.255.216.250, port: 443, type: trojan, password: CF68213490, skip-cert-verify: false}
+  - {name: 🇬🇧 UK-00226, server: 82.38.31.199, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-00070, server: 82.38.31.186, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-00061, server: 82.38.31.187, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-00063, server: 82.38.31.57, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇬🇧 UK-00065, server: 82.38.31.208, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇬🇧 UK-07827, server: 82.38.31.200, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ}
+  - {name: 🇳🇱 Netherlands-00059, server: 193.29.139.151, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
