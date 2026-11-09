@@ -1,4 +1,4 @@
-name: Collect
+name: runner
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ on:
 jobs:
   main:
     name: Collect & SpeedTest & Filter
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-24.04
     #timeout-minutes: 90
     steps:
     
@@ -23,7 +23,7 @@ jobs:
       
       - uses: actions/setup-python@v7.1.0
         with:
-          python-version: "3.15.x"
+          python-version: "3.11.x"
           
       - name: Clean working directory
         run: |
